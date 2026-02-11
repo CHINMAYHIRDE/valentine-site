@@ -82,11 +82,19 @@ button{
 <script>
 
 function yesClick(){
+
+ // Hide buttons after YES click
+ document.getElementById("yes").style.display = "none";
+ document.getElementById("no").style.display = "none";
+
+ // Show ACK + Message + Image
  document.getElementById("result").innerHTML =
- "💙 Thank you Dentist, you make people smile 😊<br>" +
+ "<h3 style='color:green'>✔ ACKNOWLEDGED</h3>" +
+ "💙 Thank you Dr Madhuri Selukar, you make people smile 😊<br>" +
  "<img src='dentist.jpg' alt='Dentist Photo'>";
 }
 
+// NO button moving logic
 let noBtn = document.getElementById("no");
 let box = document.getElementById("box");
 
